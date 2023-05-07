@@ -1,7 +1,7 @@
 import openai
 import random
 
-API_KEY = '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'
+API_KEY = '' # <- INSERT OPENAI API KEY HERE
 
 openai.api_key = API_KEY
 
