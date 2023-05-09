@@ -1,7 +1,8 @@
 import openai
 import random
 
-API_KEY = '' # <- INSERT OPENAI API KEY HERE
+# Insert Open AI API key below
+API_KEY = ''
 
 openai.api_key = API_KEY
 
@@ -53,58 +54,35 @@ def generateTopics(overallLearningGoal,subtopicAmount):
 
 ######################################################## END: Initial Functions Used ############################################################
 # Goals of this specific lesson
+# Insert what the lesson goal is
+overallLearningGoal = 'what the history of AI is' # the user is trying to learn WHAT as an umbrella end goal? (i.e. 'what a Faster R-CNN is', 'what unicorns are', 'why atoms are stable','what the basic biology behind eukaryotic is')
 
-# MC Settings
+
+# MC Settings (alter as you wish, default is 50% FR-50% MC)
 multipleChoiceChance = .5
 
 # Automatic Topic Generation Settings
-automaticTopicGeneration = False # should topics be automatically generated?
+# Should topics be automatically generated? Default is False
+automaticTopicGeneration = False 
+
+# If topics are automatically generated, how many should be?
 subtopicAmount = 3  # how many topics should be automatically generated? (only applicable if automaticTopicGeneration == True)
 
 if not automaticTopicGeneration: # If we want to manually fill in the topics to cover & information about it
-    # overallLearningGoal = 'what AI is' # the user is trying to learn WHAT as an umbrella end goal? (i.e. 'what a Faster R-CNN is', 'what unicorns are', 'why atoms are stable')
-    # userLearningPlatform = 'watched a video' # how did the user initially learn the information? (i.e. 'read a textbook','watched a video','watched a lecture','talked to a professor')
-    # topicsList = ['the possible definitions of AI',  # list all subtopics you want to specifically go over
-    #                 'the four schools of thought (thinking rationally, acting rationally, thinking human-like, acting human-like)',
-    #                 'the Turing test',
-    #                 'why we study AI',
-    #                 'common fields in which we can use AI in']
-    
-    
-    # keyWordDict = {("definition","ai","artificial intelligence"):'Many definitions of AI include, "a branch of computer science that allows computers to make predictions and decisions to solve problems", "ability for computer program or machine to think and learn","the science and engineering of making intelligent machines","study and design of intelligent agents to take actions to maximize success".',
-    #                ("turing",):"A Turing Test is a general test to determine whether or not a computer can think. It passes the test of intelligence if it can fool a human interrogator into believing its results were human-made.",
-    #                ("why","ai","artificial intelligence"):"AI has the potential to free up humanity from a lot of mental drudgery",
-    #                ("where","ai","artificial intelligence"):"AI can be implemented to places including but not limited to CV, NLP, Self-Driving Cars, Spoken Language Processing, Robotics, Planning, and Games."}
-
-    overallLearningGoal = 'what the history of AI is' # the user is trying to learn WHAT as an umbrella end goal? (i.e. 'what a Faster R-CNN is', 'what unicorns are', 'why atoms are stable')
     userLearningPlatform = 'watched a video' # how did the user initially learn the information? (i.e. 'read a textbook','watched a video','watched a lecture','talked to a professor')
+    # Insert a topic list
     topicsList = ['the Gestation of AI',
                   'Early Enthusiasm and Expectations',
                   'Knowledge-based AI',
                   'AI Becomes Scientific']
     
-    
+    # Insert keyword dictionary informaton below
     keyWordDict = {("gestation","ai","artificial intelligence"):'The period of time called the "Gestation of AI" was between the 1940s-1950s. It included McCulloch and Pitts, who proposed the first neural network for boolean functions, modeled after a neuron (a biological nerve cell representing a functional unit in the brain; Neurons receive and send nerve impulses). In 1950, Alan Turing published "Computing Machinery and Intelligence", where he proposed the AI agenda and the Turing Test.',
                    ("early enthusiasm","expectations"):'The period of time called "Early Enthusiasm and Expectations" was between the 1950s-1970s. In 1956, the Dartmouth Summer Research Project on AI boosted interest and it was largely recognized as the event that kicked off the interest in AI. John McCarthy coiled the term "Artificial Intelligence". In 1956, Arthur Samuel''s checkers playing program (developed at IBM; used reinforcement learning) was presented to the public. It was able to outperform the average player. In 1958, McCarthy invented Lisp, a programming language common for AI (for 30 years). From 1963-1970, Minsky''s students at MIT worked on Microworlds (solving integrals, algebra, and geometry problems). The most Microworld famous was SHRDLU, a block world that could perform simple actions (pick up block, move, place elsewhere) from natural language requests. The early 60''s included the development of the first neural network. From 1960-1962, Bernie Widrow and his student invented Adaline, and in 1962 Frank Rosenblatt invented the Perceptron. From 1966-1972, Shakey the Robot was invented as the first general purpose mobile robot that used logical reasoning. Lastly, interest for AI in the 1960 began to wane as AI systems were not scalable and were limited.',
                    ("knowledge-based","ai","artificial intelligence"):'The period of time called "Knowledge-based AI" was between the 1960s-1990s. An idea began to immerge: incorporating domain knowledge to encode information about the world. Led to the creation of expert systems, simulationing human decision making processes using rules. As a result, in the 1980s, AI became an industry. However, expert systems were limited as they couldnt handle uncertainty or learn from experience. Consequently, AI research slowed down and let to the AI winter.',
                    ("scientific","ai","artificial intelligence"):'The period of time called "AI Becomes Scientific" started in the 1990s and is still ongoing. Subfields came together to make AI a success. First, neural networks returned with backpropagation. They address imperfections of the world and learn from data. Failure of expert systems also led to probabilistic models rather than boolean logic. Allowed AI to make a huge leap. Machine learning (learning from experience and data) also rised. Benchmark data sets and repositories (i.e. MNIST, ImageNet) helped scientists develop more powerful models. From 2001 and ongoing, the World Wide Web facilitated a large amount of data. Facilitating events included the 2011 IBM Watson (in Jeopardy!), which renewed public interest. From 2011 and ongoing, deep learning began to take over (great machinery allowed this to occur). Now, we are in the AI Spring as a result.'}
 
-    # overallLearningGoal = 'what the future of AI may be' # the user is trying to learn WHAT as an umbrella end goal? (i.e. 'what a Faster R-CNN is', 'what unicorns are', 'why atoms are stable')
-    # userLearningPlatform = 'watched a video' # how did the user initially learn the information? (i.e. 'read a textbook','watched a video','watched a lecture','talked to a professor')
-    # topicsList = ['The Components of Ethical AI. The three components are defined as 1. interpretable AI, 2. bias AI, and 3. education of AI.',
-    #               'Concerns with AI',
-    #               'The Potential Future with AI']
-    
-    
-    # keyWordDict = {("interpretable",):'Interpretable AI aims to interpret the complex and incomprehensable black box models. AI models must be accountable and interpretable in order to (1) ensure they are inclusive, (2) increase our confidence in using them, and (3) gain knowledge',
-    #                ("bias",):'The data we use to build AI can include human-bias decisions. An example of AI bias includes phone cameras, which tend to have trouble recognizing darker-skinned individuals. This may be because there are fewer darker-skinned faces than lighter-skinned faces in the training data used to generate the model. Fair AI aims to reduce bias so that decision-making is fair, ethical, and inclusive.',
-    #                ("education","ai","artificial intelligence"):'AI education should be promoted to empower the younger generation with AI knowledge as they grow. This means allowing AI education to students regardless of nationality, race, or gender.',
-    #                ("ai","artificial intelligence","concerns"):'There is a lot to take into consideration as AI develops into the future. Some of these concerns include: "How will AI impact our jobs, cities, and laws?","Should we be afraid of AI?","Is AI a threat to humankind?"',
-    #                ("potential","ai","artificial intelligence","future"):'With AI, the future has the potential to be: clean (cleaning robots, self-driving robots, traffic reduction, renewable energy, smart cities), fair (identify and irraticate injustice and bias, provide healthcare education, employment, and services), and healthy (personalized medicine, fitness, AI physicians, treatment, medicine, and science). They will help humanity be happy.'}
-
-
 else:
-    overallLearningGoal = 'what the basic biology behind eukaryotic is'
     userLearningPlatform = 'been asked to learn from me'
     topicsList = generateTopics(overallLearningGoal,subtopicAmount)
     print(topicsList)
@@ -119,7 +97,7 @@ topicConcatenation = topicConcatenation + ', and ' + topicsList[-1] + '.' # uniq
 # Create each background
 background_prompt = 'You are an AI tutor (named ' + ai_name + '), whose goal is to teach a human (named ' + human_name + ') about ' + overallLearningGoal + '. Specifically, ' + human_name + ' has just ' + userLearningPlatform.replace("me","you") + ' detailing ' + topicConcatenation + ' You should always respond to what ' + human_name + ' says as yourself, the AI tutor ' + ai_name + '.'
 
-changepoint_prompt = 'You are a classifier, attempting to decern whether a user is either asking a question (i.e. getting clarification), or b) does not need help or is finished learning (i.e. says they don''t need any help, are fine, are finished with explainations, have no more questions, makes an unrelated comment).'
+changepoint_prompt = 'You are a classifier, attempting to decern whether a user is either asking a question (i.e. getting clarification), or b) does not need help or is finished learning (i.e. says they don''t need any help, are fine, are finished with explanations, have no more questions, makes an unrelated comment).'
 
 ranking_prompt = 'You are a ranking system. You will be given a conversation with ' + ai_name + ' (an AI tutor) whose goal is to teach a human (named ' + human_name + ') about ' + overallLearningGoal + ', and then you will rank how accurate their response is to real definitions and accurate responses. Specifically, questions ' + human_name + ' will respond to relates to ' + topicConcatenation + '. You will pay specific attention to the wording of each question and answer to observe the correctness.'
 
@@ -211,16 +189,16 @@ def rankUserResponse(curQuestion,human_response,questionType):
     return None # shouldnt be possible
 
 def explainBadRanking(curQuestion,human_response):
-    explaination_prompt = background_prompt + "\n\n" + 'Human: The AI just asked the question: "' + curQuestion.replace("\n","") + '". I just responded: "' + human_response.replace("\n","") + '". Please explain what about my answer is incorrect and help me understand my misconceptions.'
-    explaination_prompt = addKeyWordPhrases(explaination_prompt) # add any keyword phrases that may help explain this better
-    response = aiResponse(explaination_prompt) + "\n\nAthena: Does this explaination make sense or do you have any other questions?" + '\n'
+    explanation_prompt = background_prompt + "\n\n" + 'Human: The AI just asked the question: "' + curQuestion.replace("\n","") + '". I just responded: "' + human_response.replace("\n","") + '". Please explain what about my answer is incorrect and help me understand my misconceptions.'
+    explanation_prompt = addKeyWordPhrases(explanation_prompt) # add any keyword phrases that may help explain this better
+    response = aiResponse(explanation_prompt) + "\n\nAthena: Does this explanation make sense or do you have any other questions?" + '\n'
 
     return response
 
 def explainGoodRanking(curQuestion,human_response):
-    explaination_prompt = background_prompt + "\n\n" + 'Human: The AI just asked the question: "' + curQuestion.replace("\n","") + '". I just responded: "' + human_response.replace("\n","") + '". Please explain what about my answer was good and what may need improvement.'
-    explaination_prompt = addKeyWordPhrases(explaination_prompt) # add any keyword phrases that may help explain this better
-    response = aiResponse(explaination_prompt)
+    explanation_prompt = background_prompt + "\n\n" + 'Human: The AI just asked the question: "' + curQuestion.replace("\n","") + '". I just responded: "' + human_response.replace("\n","") + '". Please explain what about my answer was good and what may need improvement.'
+    explanation_prompt = addKeyWordPhrases(explanation_prompt) # add any keyword phrases that may help explain this better
+    response = aiResponse(explanation_prompt)
 
     return response
 
@@ -355,3 +333,34 @@ net_conversation = net_conversation + "\n\n" + endText
 print("Here is the net logging of the conversation that occurred: \n\n")
 print(net_conversation)
 ################################################## END: Conclusion #############################################
+
+
+
+################################################## NOTES #######################################################
+
+    # overallLearningGoal = 'what the future of AI may be' # the user is trying to learn WHAT as an umbrella end goal? (i.e. 'what a Faster R-CNN is', 'what unicorns are', 'why atoms are stable')
+    # userLearningPlatform = 'watched a video' # how did the user initially learn the information? (i.e. 'read a textbook','watched a video','watched a lecture','talked to a professor')
+    # topicsList = ['The Components of Ethical AI. The three components are defined as 1. interpretable AI, 2. bias AI, and 3. education of AI.',
+    #               'Concerns with AI',
+    #               'The Potential Future with AI']
+    
+    
+    # keyWordDict = {("interpretable",):'Interpretable AI aims to interpret the complex and incomprehensable black box models. AI models must be accountable and interpretable in order to (1) ensure they are inclusive, (2) increase our confidence in using them, and (3) gain knowledge',
+    #                ("bias",):'The data we use to build AI can include human-bias decisions. An example of AI bias includes phone cameras, which tend to have trouble recognizing darker-skinned individuals. This may be because there are fewer darker-skinned faces than lighter-skinned faces in the training data used to generate the model. Fair AI aims to reduce bias so that decision-making is fair, ethical, and inclusive.',
+    #                ("education","ai","artificial intelligence"):'AI education should be promoted to empower the younger generation with AI knowledge as they grow. This means allowing AI education to students regardless of nationality, race, or gender.',
+    #                ("ai","artificial intelligence","concerns"):'There is a lot to take into consideration as AI develops into the future. Some of these concerns include: "How will AI impact our jobs, cities, and laws?","Should we be afraid of AI?","Is AI a threat to humankind?"',
+    #                ("potential","ai","artificial intelligence","future"):'With AI, the future has the potential to be: clean (cleaning robots, self-driving robots, traffic reduction, renewable energy, smart cities), fair (identify and irraticate injustice and bias, provide healthcare education, employment, and services), and healthy (personalized medicine, fitness, AI physicians, treatment, medicine, and science). They will help humanity be happy.'}
+    
+    # overallLearningGoal = 'what AI is' # the user is trying to learn WHAT as an umbrella end goal? (i.e. 'what a Faster R-CNN is', 'what unicorns are', 'why atoms are stable')
+    # userLearningPlatform = 'watched a video' # how did the user initially learn the information? (i.e. 'read a textbook','watched a video','watched a lecture','talked to a professor')
+    # topicsList = ['the possible definitions of AI',  # list all subtopics you want to specifically go over
+    #                 'the four schools of thought (thinking rationally, acting rationally, thinking human-like, acting human-like)',
+    #                 'the Turing test',
+    #                 'why we study AI',
+    #                 'common fields in which we can use AI in']
+    
+    
+    # keyWordDict = {("definition","ai","artificial intelligence"):'Many definitions of AI include, "a branch of computer science that allows computers to make predictions and decisions to solve problems", "ability for computer program or machine to think and learn","the science and engineering of making intelligent machines","study and design of intelligent agents to take actions to maximize success".',
+    #                ("turing",):"A Turing Test is a general test to determine whether or not a computer can think. It passes the test of intelligence if it can fool a human interrogator into believing its results were human-made.",
+    #                ("why","ai","artificial intelligence"):"AI has the potential to free up humanity from a lot of mental drudgery",
+    #                ("where","ai","artificial intelligence"):"AI can be implemented to places including but not limited to CV, NLP, Self-Driving Cars, Spoken Language Processing, Robotics, Planning, and Games."}
