@@ -13,3 +13,5 @@ Leveraging GPT-3 for Adaptive and Interactive Intelligent Tutoring for Personali
 
 
 Note that it is suggested to explain your answers for multiple choice as it helps Athena in ranking the responses, which is currently still in beta testing and unperfected. Furthermore, keyword information included should be plentiful for the best results.
+
+For any questions, comments, or concerns, please contact b.castleman@columbia.edu. Thank you and have fun! :)
