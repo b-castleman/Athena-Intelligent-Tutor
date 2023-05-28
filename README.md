@@ -1,6 +1,10 @@
 # Athena-Intelligent-Tutor
 Leveraging GPT-3 for Adaptive and Interactive Intelligent Tutoring for Personalized Learning
 
+# Full Paper URL:
+https://docs.google.com/document/d/1nyxULSE9HNTsvlgcLDJXLqGqZMQtqWgu/edit?usp=sharing&ouid=104224558685560625745&rtpof=true&sd=true
+
+# Instructions:
 
 1. Clone the repository locally and open up the file "athenaV2.py"
 2. Insert your Open AI API key on line 5.
