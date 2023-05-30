@@ -2,7 +2,7 @@
 Leveraging GPT-3 for Adaptive and Interactive Intelligent Tutoring for Personalized Learning
 
 # Full Paper URL:
-//Currently not for public access, contact author for details//
+Currently not for public access, contact author for details
 
 # Instructions:
 
