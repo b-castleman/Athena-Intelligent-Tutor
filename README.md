@@ -4,6 +4,9 @@ Leveraging GPT-3.5 for Adaptive and Interactive Intelligent Tutoring for Persona
 # Full Paper URL:
 https://drive.google.com/file/d/1rdAtiuz_nukEvmSKCNxT5F-9Yzsr6O3S/view?usp=sharing
 
+# Demo:
+https://www.youtube.com/watch?v=GTjb9nEDLX0&ab_channel=BlakeCastleman
+
 # Instructions:
 
 1. Clone the repository locally and open up the file "athenaV2.py"
